@@ -124,48 +124,60 @@ header p {
 
 /* Sidebar */
 .sidebar {
-  width: 200px;
-  background: linear-gradient(to bottom, #fff, #f9f9f9);
-  padding: 15px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  border-right: 2px solid #ffc107;
+    width: 200px;
+    background: linear-gradient(to bottom, #fff, #f9f9f9);
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-right: 2px solid #ffc107;
+    display: flex; /* Ensure vertical stacking */
+    flex-direction: column;
+    gap: 20px; /* Add spacing between sidebar elements */
+    box-sizing: border-box;
 }
 .search-bar {
-  margin-bottom: 15px;
+    margin-bottom: 25px; /* Increase spacing below search bar */
+    width: 100%;
+    box-sizing: border-box;
 }
 #search {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 0.8em;
-  transition: border-color 0.3s ease;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.8em;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
 }
 #search:focus {
-  border-color: #ffc107;
-  outline: none;
+    border-color: #ffc107;
+    outline: none;
+}
+.collapsible {
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 .sidebar-btn {
-  background-color: #ce1126;
-  color: white;
-  margin-bottom: 8px;
+    background-color: #ce1126;
+    color: white;
+    margin-bottom: 8px;
 }
 .sidebar-btn:hover {
-  background-color: #ffc107;
-  color: #333;
+    background-color: #ffc107;
+    color: #333;
 }
 .sidebar-content {
-  background-color: #f9f9f9;
-  padding: 0;
-  border-radius: 0 0 6px 6px;
-  font-size: 0.8em;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.1s ease;
+    background-color: #f9f9f9;
+    padding: 0;
+    border-radius: 0 0 6px 6px;
+    font-size: 0.8em;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.1s ease;
 }
 .sidebar-content.active {
-  max-height: 300px;
-  padding: 10px;
+    max-height: 300px;
+    padding: 10px;
 }
 
 /* Main Content */
